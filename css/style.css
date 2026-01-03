@@ -1,0 +1,51 @@
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: monospace;
+  padding: 20px;
+}
+
+nav a {
+  margin-right: 15px;
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  background: #161b22;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.heat {
+  display: grid;
+  grid-template-columns: repeat(53, 12px);
+  gap: 2px;
+}
+
+.cell {
+  width: 12px;
+  height: 12px;
+  background: #161b22;
+}
+
+.l1 {
+  background: #0e4429;
+}
+.l2 {
+  background: #006d32;
+}
+.l3 {
+  background: #26a641;
+}
+.l4 {
+  background: #39d353;
+}

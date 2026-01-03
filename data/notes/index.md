@@ -1,0 +1,5 @@
+# Notes
+
+- OS
+- Embedded
+- Security
