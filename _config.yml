@@ -18,23 +18,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Kanak Shilledar
-email: kanakshilledar111@protonmail.com
+title: Anant Gyan Singhal
+email: sanantgyan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Join my journey in learning about RISCV, Embedded Linux, and Cybersecurity
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kanakshilledar.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kanak_shilledar
-github_username:  kanakshilledar
+url: "https://siliwho.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: siliwho
+github_username: siliwho
 
 # Build settings
 remote_theme: chesterhow/tale
-permalink:    /:year-:month-:day/:title
-paginate:     5
+permalink: /:year-:month-:day/:title
+paginate: 5
 plugins:
   - jekyll-paginate
   - jekyll-remote-theme
-
 
 # Exclude from processing.
 # The following items will not be processed, by default.
