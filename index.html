@@ -1,4 +1,9 @@
 <!doctype html>
+<!--
+This file is intentionally left minimal.
+You will NOT write blogs here.
+Blogs & learnings are written as Markdown (.md) files and rendered by Jekyll.
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,116 +11,59 @@
     <title>My Blog & Learnings</title>
     <style>
       body {
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          sans-serif;
-        margin: 0;
+        font-family: system-ui, sans-serif;
         background: #0f172a;
         color: #e5e7eb;
+        margin: 0;
       }
       header {
         padding: 1rem 2rem;
-        background: #020617;
         border-bottom: 1px solid #1e293b;
         display: flex;
         justify-content: space-between;
-        align-items: center;
       }
-      header h1 {
-        font-size: 1.2rem;
-      }
-      nav a {
-        margin-left: 1rem;
+      a {
         color: #93c5fd;
         text-decoration: none;
       }
-      nav a:hover {
-        text-decoration: underline;
-      }
-      main {
-        max-width: 900px;
+      .container {
+        max-width: 1000px;
         margin: 2rem auto;
-        padding: 0 1rem;
+        padding: 1rem;
       }
-      section {
-        display: none;
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
       }
-      section.active {
-        display: block;
-      }
-      article {
+      .card {
         background: #020617;
-        padding: 1.2rem;
-        border-radius: 10px;
-        margin-bottom: 1.5rem;
         border: 1px solid #1e293b;
+        padding: 1rem;
+        border-radius: 12px;
       }
-      article h2 {
-        margin-top: 0;
+      .card:hover {
+        border-color: #38bdf8;
       }
       .date {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         color: #94a3b8;
-        margin-bottom: 0.5rem;
-      }
-      footer {
-        text-align: center;
-        padding: 2rem;
-        font-size: 0.85rem;
-        color: #64748b;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>My Daily Blog</h1>
+      <h2>My Knowledge Journal</h2>
       <nav>
-        <a href="#" onclick="showPage('blogs')">Blogs</a>
-        <a href="#" onclick="showPage('learnings')">Learnings</a>
+        <a href="/blogs">Blogs</a>
+        <a href="/learnings">Learnings</a>
       </nav>
     </header>
-
-    <main>
-      <!-- BLOG PAGE -->
-      <section id="blogs" class="active">
-        <article>
-          <div class="date">2026-01-06</div>
-          <h2>Day 1 – Getting Started</h2>
-          <p>
-            Today I set up my GitHub Pages website and decided to write daily
-            blogs to track my progress and thoughts.
-          </p>
-        </article>
-
-        <!-- Copy this article block for every new blog -->
-      </section>
-
-      <!-- LEARNINGS PAGE -->
-      <section id="learnings">
-        <article>
-          <div class="date">2026-01-06</div>
-          <h2>What I Learned Today</h2>
-          <ul>
-            <li>How GitHub Pages works</li>
-            <li>Basic static site structure</li>
-            <li>Simple JavaScript navigation</li>
-          </ul>
-        </article>
-
-        <!-- Copy this article block for every new learning -->
-      </section>
-    </main>
-
-    <footer>© 2026 • Built with GitHub Pages</footer>
-
-    <script>
-      function showPage(page) {
-        document.getElementById("blogs").classList.remove("active");
-        document.getElementById("learnings").classList.remove("active");
-        document.getElementById(page).classList.add("active");
-      }
-    </script>
+    <div class="container">
+      <h3>Welcome</h3>
+      <p>
+        All content on this site is written in Markdown files inside folders.
+      </p>
+    </div>
   </body>
 </html>

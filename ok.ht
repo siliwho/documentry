@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog & Learnings</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        margin: 0;
+        background: #0f172a;
+        color: #e5e7eb;
+      }
+      header {
+        padding: 1rem 2rem;
+        background: #020617;
+        border-bottom: 1px solid #1e293b;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        font-size: 1.2rem;
+      }
+      nav a {
+        margin-left: 1rem;
+        color: #93c5fd;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      section {
+        display: none;
+      }
+      section.active {
+        display: block;
+      }
+      article {
+        background: #020617;
+        padding: 1.2rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        border: 1px solid #1e293b;
+      }
+      article h2 {
+        margin-top: 0;
+      }
+      .date {
+        font-size: 0.85rem;
+        color: #94a3b8;
+        margin-bottom: 0.5rem;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.85rem;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Daily Blog</h1>
+      <nav>
+        <a href="#" onclick="showPage('blogs')">Blogs</a>
+        <a href="#" onclick="showPage('learnings')">Learnings</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- BLOG PAGE -->
+      <section id="blogs" class="active">
+        <article>
+          <div class="date">2026-01-06</div>
+          <h2>Day 1 – Getting Started</h2>
+          <p>
+            Today I set up my GitHub Pages website and decided to write daily
+            blogs to track my progress and thoughts.
+          </p>
+        </article>
+
+        <!-- Copy this article block for every new blog -->
+      </section>
+
+      <!-- LEARNINGS PAGE -->
+      <section id="learnings">
+        <article>
+          <div class="date">2026-01-06</div>
+          <h2>What I Learned Today</h2>
+          <ul>
+            <li>How GitHub Pages works</li>
+            <li>Basic static site structure</li>
+            <li>Simple JavaScript navigation</li>
+          </ul>
+        </article>
+
+        <!-- Copy this article block for every new learning -->
+      </section>
+    </main>
+
+    <footer>© 2026 • Built with GitHub Pages</footer>
+
+    <script>
+      function showPage(page) {
+        document.getElementById("blogs").classList.remove("active");
+        document.getElementById("learnings").classList.remove("active");
+        document.getElementById(page).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
