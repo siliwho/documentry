@@ -1,12 +1,12 @@
----
-layout: default
----
+--- layout: default ---
 
-<!-- THEME BUTTON -->
-<div style="text-align: right; margin-bottom: 1rem;">
-  <button onclick="toggleTheme()">🌗 Theme</button>
+<div class="content">
+  <!-- THEME SWITCH BUTTON -->
+  <div style="text-align: right; margin-bottom: 1rem">
+    <button onclick="toggleTheme()" aria-label="Toggle theme">🌗 Theme</button>
+  </div>
+
+  {{ content }}
 </div>
-
-{{ content }}
 
 <script src="/assets/js/theme.js"></script>
