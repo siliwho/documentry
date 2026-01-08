@@ -1,45 +1,113 @@
-/* ---------- DEFAULT (GitHub Light) ---------- */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
 :root {
-  --bg: #ffffff;
-  --fg: #24292f;
-  --accent: #0969da;
-  --code-bg: #f6f8fa;
+  /* Default: Classic Terminal (Green on Black) */
+  --bg: #0a0a0a;
+  --fg: #00ff41;
+  --accent: #00ff41;
+  --code-bg: #1a1a1a;
+  --prompt: #00ff41;
+  --nav-bg: #000000;
 }
 
-/* ---------- GitHub Dark ---------- */
 [data-theme="github-dark"] {
   --bg: #0d1117;
   --fg: #c9d1d9;
   --accent: #58a6ff;
   --code-bg: #161b22;
+  --prompt: #238636;
 }
 
-/* ---------- Tokyo Night ---------- */
+[data-theme="github-light"] {
+  --bg: #ffffff;
+  --fg: #24292f;
+  --accent: #0969da;
+  --code-bg: #f6f8fa;
+  --prompt: #2da44e;
+}
+
 [data-theme="tokyonight"] {
   --bg: #1a1b26;
   --fg: #c0caf5;
   --accent: #7aa2f7;
   --code-bg: #24283b;
+  --prompt: #9ece6a;
 }
 
-/* ---------- Gruvbox Dark ---------- */
-[data-theme="gruvbox"] {
-  --bg: #282828;
-  --fg: #ebdbb2;
-  --accent: #fabd2f;
-  --code-bg: #3c3836;
+* {
+  box-sizing: border-box;
 }
 
-/* ---------- APPLY VARIABLES ---------- */
 body {
   background-color: var(--bg);
   color: var(--fg);
+  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* NAVIGATION FIX */
+.terminal-nav {
+  background-color: var(--nav-bg);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.prompt {
+  color: var(--prompt);
+  font-weight: bold;
 }
 
 a {
   color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+}
+a:hover {
+  border-bottom: 1px dashed var(--accent);
 }
 
-pre, code {
+/* TERMINAL TEXT BLOCKS */
+pre,
+code {
+  font-family: "JetBrains Mono", monospace;
   background: var(--code-bg);
+  color: var(--fg);
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid var(--accent);
+  overflow-x: auto;
+  display: block;
+}
+
+ul.file-list {
+  list-style: none;
+  padding: 0;
+}
+ul.file-list li {
+  margin-bottom: 10px;
+}
+
+button#theme-toggle {
+  background: var(--fg);
+  color: var(--bg);
+  border: none;
+  padding: 5px 10px;
+  font-family: "JetBrains Mono", monospace;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: auto;
 }

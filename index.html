@@ -3,44 +3,31 @@ layout: default
 title: Home
 ---
 
-<pre
-  style="
-    border: none;
-    background: none;
-    color: var(--accent);
-    font-weight: bold;
-  "
->
-    ___ _   _  _   _  _ _____ 
-   / _ \ \ | |/ \ | \| |_   _|
-  / /_\ \ \| / _ \| . ` | | |  
- / /   \ \ |\ / _ \ | \ | | |  
- \/     \/_| \_/ \_/ \_| |_|  
-</pre>
+<div class="terminal-window">
+  <pre style="border: none; padding: 0; background: transparent">
+   _____                      __ 
+  /  _  \   ____ _____    ___/  |_ 
+ /  /_\  \ /    \\__  \  /    \   __\
+/    |    \   |  \/ __ \|   |  \  |  
+\____|__  /___|  (____  /___|  /__|  
+        \/     \/     \/     \/      
+</pre
+  >
 
-<p><span class="prompt">guest@terminal:~$</span> locate anant</p>
-<p>Searching system for "Anant Gyan Singhal"...</p>
+  <p><span class="prompt">guest@anant:~$</span> finger siliwho</p>
+  <pre>
+Login: siliwho           Name: Anant Gyan Singhal
+Project: RISC-V Research & Kernel Dev
+Status: System Online...
+</pre
+  >
 
-<div style="border: 1px solid #333; padding: 20px; border-radius: 5px">
-  <p><strong>Current Status:</strong> Learning RISC-V & Embedded Linux</p>
-  <p><strong>Location:</strong> ~/Projects/documentary</p>
+  <p><span class="prompt">guest@anant:~$</span> ls -F</p>
+  <ul class="file-list">
+    <li><span class="prompt">drwxr-xr-x</span> <a href="/posts/">posts/</a></li>
+    <li><span class="prompt">drwxr-xr-x</span> <a href="/daily/">daily/</a></li>
+    <li>
+      <span class="prompt">-rw-r--r--</span> <a href="/about/">about.md</a>
+    </li>
+  </ul>
 </div>
-
-<h3 style="margin-top: 2rem">System Navigation:</h3>
-<ul class="file-list">
-  <li>
-    <span class="prompt">dir</span>
-    <a href="/posts/">Technical Posts</a> (In-depth articles)
-  </li>
-  <li>
-    <span class="prompt">dir</span> <a href="/daily/">Daily Blogs</a> (Quick
-    status updates)
-  </li>
-  <li>
-    <span class="prompt">dir</span>
-    <a href="/notes/">Research Notes</a> (Reference material)
-  </li>
-  <li>
-    <span class="prompt">dir</span> <a href="/about/">Research Notes</a> (about)
-  </li>
-</ul>

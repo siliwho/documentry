@@ -11,31 +11,20 @@
       href="{{ '/assets/css/themes.css' | relative_url }}"
     />
     <script>
-      const savedTheme = localStorage.getItem("theme") || "github-dark";
+      // Critical: Apply theme before page renders to avoid white flash
+      const savedTheme = localStorage.getItem("theme") || "terminal-classic";
       document.documentElement.setAttribute("data-theme", savedTheme);
     </script>
   </head>
   <body>
     <nav class="terminal-nav">
-      <span class="prompt">anant@sys:~$</span>
-      <a href="/">cd ~</a>
-      <a href="/posts/">/posts</a>
-      <a href="/daily/">/daily</a>
-      <a href="/about/">/about</a>
-      <a href="/notes/" style="margin-left: 15px">cd notes/</a>
-      <button
-        onclick="toggleTheme()"
-        style="
-          margin-left: auto;
-          background: none;
-          border: 1px solid var(--accent);
-          color: var(--fg);
-          cursor: pointer;
-          font-family: inherit;
-        "
-      >
-        ./theme.sh
-      </button>
+      <span class="prompt">anant@dev:~$</span>
+      <a href="{{ '/' | relative_url }}">ls /home</a>
+      <a href="{{ '/posts/' | relative_url }}">cd /posts</a>
+      <a href="{{ '/daily/' | relative_url }}">cd /daily</a>
+      <a href="{{ '/about/' | relative_url }}">cat about.md</a>
+      <a href="{{ '/notes/' | relative_url }}">cd /notes</a>
+      <button id="theme-toggle" onclick="toggleTheme()">sh theme.sh</button>
     </nav>
 
     <div class="container">{{ content }}</div>
