@@ -3,13 +3,11 @@ layout: default
 title: Technical Posts
 permalink: /posts/
 ---
-
-<h1><span class="prompt">~/posts $</span> ls -la</h1>
-
+<h1><span class="prompt">~/posts $</span> ls -F</h1>
 <ul class="file-list">
   {% for post in site.posts %}
     <li>
-      <span style="color: var(--prompt)">drwxr-xr-x</span> 
+      <span class="prompt">drwxr-xr-x</span>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}

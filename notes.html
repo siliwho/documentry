@@ -1,19 +1,12 @@
 ---
 layout: default
-title: Notes
+title: Technical Notes
 permalink: /notes/
 ---
-
 <h1><span class="prompt">~/notes $</span> tree</h1>
-
-<ul style="list-style: none; padding: 0">
+<ul class="file-list">
   {% for note in site.notes %}
-  <li style="margin-bottom: 10px">
-    ├── <a href="{{ note.url }}">{{ note.title }}</a>
-  </li>
+    <li>├── <a href="{{ note.url }}">{{ note.title }}</a></li>
   {% endfor %}
 </ul>
-
-{% if site.notes.size == 0 %}
-<p style="opacity: 0.5">Directory empty. (Add files to _notes folder)</p>
-{% endif %}
+{% if site.notes.size == 0 %}<p>No notes found.</p>{% endif %}

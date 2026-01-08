@@ -5,13 +5,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ page.title }} | {{ site.title }}</title>
     <link
       rel="stylesheet"
       href="{{ '/assets/css/themes.css' | relative_url }}"
     />
     <script>
-      // Critical: Apply theme before page renders to avoid white flash
       const savedTheme = localStorage.getItem("theme") || "terminal-classic";
       document.documentElement.setAttribute("data-theme", savedTheme);
     </script>
@@ -19,11 +19,11 @@
   <body>
     <nav class="terminal-nav">
       <span class="prompt">anant@dev:~$</span>
-      <a href="{{ '/' | relative_url }}">ls /home</a>
-      <a href="{{ '/posts/' | relative_url }}">cd /posts</a>
-      <a href="{{ '/daily/' | relative_url }}">cd /daily</a>
-      <a href="{{ '/about/' | relative_url }}">cat about.md</a>
-      <a href="{{ '/notes/' | relative_url }}">cd /notes</a>
+      <a href="/">ls /home</a>
+      <a href="/posts/">cd /posts</a>
+      <a href="/daily/">cd /daily</a>
+      <a href="/notes/">cd /notes</a>
+      <a href="/about/">cat about.md</a>
       <button id="theme-toggle" onclick="toggleTheme()">sh theme.sh</button>
     </nav>
 

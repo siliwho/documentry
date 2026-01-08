@@ -1,17 +1,15 @@
 ---
 layout: default
-title: Daily Blogs
+title: Daily Logs
 permalink: /daily/
 ---
-
 <h1><span class="prompt">~/daily $</span> ls -1</h1>
-
 <ul class="file-list">
   {% for log in site.daily %}
-  <li>
-    <span class="prompt">#</span>
-    <span style="opacity: 0.5">{{ log.date | date: "%Y-%m-%d" }}</span>
-    <a href="{{ log.url }}">{{ log.title }}</a>
-  </li>
+    <li>
+      <span class="prompt">#</span>
+      <span style="opacity: 0.5; margin-right:10px;">{{ log.date | date: "%Y-%m-%d" }}</span>
+      <a href="{{ log.url }}">{{ log.title }}</a>
+    </li>
   {% endfor %}
 </ul>
