@@ -31,7 +31,7 @@ body {
   line-height: 1.6;
 }
 
-/* Consistent Terminal Header */
+/* 1. FIXED NAVIGATION */
 .terminal-nav {
   background: var(--nav-bg);
   padding: 1rem 2rem;
@@ -41,6 +41,7 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .terminal-nav a {
@@ -49,49 +50,68 @@ body {
   font-size: 0.9rem;
 }
 
-.terminal-nav a:hover {
-  opacity: 0.7;
+/* 2. FIXED CONTAINER (Added left/right space) */
+.container {
+  max-width: 900px;
+  margin: 0 auto; /* Centers the content */
+  padding: 40px 50px; /* Added 50px padding to give space from the left/right */
 }
 
-/* Main Content Wrapper */
-/* Fix the strange blue boxes/overlapping from your screenshot */
+/* 3. FIXED BOXES (Removed duplicates and forced reset) */
+pre {
+  background-color: var(--code-bg) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--accent) !important;
+  padding: 20px !important;
+  margin: 20px 0 !important;
+  border-radius: 4px;
+  overflow-x: auto;
+  display: block;
+  width: 100%;
+}
+
+/* Fix for inline code (ticks) so they don't get giant boxes */
+code {
+  font-family: "JetBrains Mono", monospace;
+  background: var(--code-bg);
+  color: var(--fg);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* If code is inside pre, don't give it a separate border */
+pre code {
+  border: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  display: inline;
+}
+
+/* 4. LISTS & TYPOGRAPHY */
+h1,
+h2,
+h3 {
+  color: var(--accent);
+  margin-top: 2.5rem;
+}
+
 .container ul {
   list-style: none;
   padding-left: 0;
 }
 
 .container li {
-  margin-bottom: 10px;
-  border: none !important; /* Removes ghost borders from old themes */
-  background: transparent !important; /* Removes ghost backgrounds */
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
 }
 
-/* Ensure code blocks don't inherit strange padding or margins */
-pre,
-code {
-  display: block;
-  width: 100%;
-  border: 1px solid var(--accent);
-  padding: 15px !important;
-  margin: 10px 0 !important;
-  background-color: var(--code-bg) !important;
-  color: var(--fg) !important;
-  box-shadow: none !important; /* Removes shadow if any old theme added it */
-}
-
-/* Fix inline code so it doesn't look like a giant block */
-p code,
-li code {
-  display: inline;
-  padding: 2px 5px !important;
-  border: none;
-}
-
-h1,
-h2,
-h3 {
-  color: var(--accent);
-  margin-top: 2rem;
+/* Add a terminal bullet point */
+.container li::before {
+  content: ">";
+  color: var(--prompt);
+  margin-right: 12px;
+  font-weight: bold;
 }
 
 .prompt {
@@ -100,44 +120,11 @@ h3 {
   margin-right: 8px;
 }
 
-/* List resets for Terminal look */
-.file-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
-.file-list li {
-  font-family: "JetBrains Mono", monospace;
-  margin-bottom: 5px; /* Tight terminal spacing */
-  display: flex;
-  align-items: center;
-}
-
-.file-list li a {
-  margin-left: 10px;
-}
-
-/* Colors for different "file types" */
-.file-list li span {
-  min-width: 50px;
-  display: inline-block;
-}
-
-pre,
-code {
-  background: var(--code-bg);
-  border: 1px solid var(--accent);
-  padding: 15px;
-  border-radius: 4px;
-  color: var(--fg);
-  overflow-x: auto;
-}
-
 a {
   color: var(--accent);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
