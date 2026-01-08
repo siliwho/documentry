@@ -3,10 +3,29 @@ layout: default
 title: Technical Notes
 permalink: /notes/
 ---
-<h1><span class="prompt">~/notes $</span> tree</h1>
+
+<h1><span class="prompt">~/notes $</span> ls -F</h1>
+
 <ul class="file-list">
   {% for note in site.notes %}
-    <li>├── <a href="{{ note.url }}">{{ note.title }}</a></li>
+    <li>
+      <span class="prompt"> [MD] </span>
+      <a href="{{ note.url | relative_url }}">{{ note.title | default: note.path }}</a>
+    </li>
+  {% endfor %}
+
+  {% for file in site.static_files %}
+    {% if file.path contains '/_notes/' and file.extname == '.pdf' %}
+    <li>
+      <span class="prompt" style="color: #ff5555;"> [PDF] </span>
+      <a href="{{ file.path | relative_url }}" target="_blank">
+        {{ file.name }}
+      </a>
+    </li>
+    {% endif %}
   {% endfor %}
 </ul>
-{% if site.notes.size == 0 %}<p>No notes found.</p>{% endif %}
+
+{% if site.notes.size == 0 and site.static_files.size == 0 %}
+  <p style="opacity: 0.5;">No files found in _notes/ directory.</p>
+{% endif %}

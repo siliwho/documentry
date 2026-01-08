@@ -33,6 +33,8 @@ collections:
     output: true
     permalink: /notes/:path/
 
+include:
+  - _notes/*.pdf
 # Build settings
 remote_theme: chesterhow/tale
 plugins:

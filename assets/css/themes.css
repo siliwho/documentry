@@ -77,11 +77,24 @@ h3 {
 .file-list {
   list-style: none;
   padding: 0;
+  margin: 1rem 0;
 }
+
 .file-list li {
-  margin-bottom: 12px;
+  font-family: "JetBrains Mono", monospace;
+  margin-bottom: 5px; /* Tight terminal spacing */
   display: flex;
   align-items: center;
+}
+
+.file-list li a {
+  margin-left: 10px;
+}
+
+/* Colors for different "file types" */
+.file-list li span {
+  min-width: 50px;
+  display: inline-block;
 }
 
 pre,
