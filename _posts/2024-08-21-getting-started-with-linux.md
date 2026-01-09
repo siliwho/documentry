@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Contributing to the Linux Kernel"
-date:   2024-08-21 15:03:43 +0530
+title: "Contributing to the Linux Kernel"
+date: 2024-08-21 15:03:43 +0530
 categories: linux kernel opensource
-author: Kanak Shilledar
+author: Anant Gyan Singhal
 ---
 
 If you’ve ever wanted to dip your toes into open source but
@@ -35,24 +35,24 @@ So, where do you actually begin? Here are a few areas that are
 perfect for beginners:
 
 - **Device Tree Bindings:**
-    Device Tree (DT) bindings are like a blueprint that tells the
-    kernel how to interact with hardware. If you’re into hardware
-    or just want to start with something relatively straightforward,
-    writing or updating DT bindings is a great way to contribute.
-    Plus, you’ll get a peek into how the kernel works with different devices.
+  Device Tree (DT) bindings are like a blueprint that tells the
+  kernel how to interact with hardware. If you’re into hardware
+  or just want to start with something relatively straightforward,
+  writing or updating DT bindings is a great way to contribute.
+  Plus, you’ll get a peek into how the kernel works with different devices.
 
 - **Documentation:**
-   You don’t need to dive into code right away. The Linux kernel has
-   tons of documentation, and it’s always in need of updates. Whether it’s
-   fixing a typo or clarifying a confusing section, documentation work is a
-   great entry point. Plus, it’s a contribution that’s highly appreciated by
-   the community.
+  You don’t need to dive into code right away. The Linux kernel has
+  tons of documentation, and it’s always in need of updates. Whether it’s
+  fixing a typo or clarifying a confusing section, documentation work is a
+  great entry point. Plus, it’s a contribution that’s highly appreciated by
+  the community.
 
 - **Bug Fixes and Code Cleanup:**
-   Every project has its bugs, and the Linux kernel is no exception. Tackling
-   minor bugs or cleaning up code (like removing outdated code or improving
-   formatting) is another solid starting point. It’s also a good way to
-   familiarize yourself with the codebase.
+  Every project has its bugs, and the Linux kernel is no exception. Tackling
+  minor bugs or cleaning up code (like removing outdated code or improving
+  formatting) is another solid starting point. It’s also a good way to
+  familiarize yourself with the codebase.
 
 ## The Kernel Contribution Workflow: What’s Different?
 
@@ -61,15 +61,15 @@ projects. If you’re used to the pull request (PR) system on GitHub, you’ll f
 the Linux kernel workflow a bit different.
 
 - **The Patch System**
-   Instead of PRs, the Linux kernel uses a patch-based system. You’ll create
-   patches using git and send them via email. Each patch should be focused
-   on a single issue—think of it as one problem, one solution.
+  Instead of PRs, the Linux kernel uses a patch-based system. You’ll create
+  patches using git and send them via email. Each patch should be focused
+  on a single issue—think of it as one problem, one solution.
 
 - **[The Mailing List](https://lore.kernel.org):**
-   Before you send your patch, it’s important to understand the mailing list
-   culture. The Linux kernel community relies heavily on mailing lists for
-   communication. Your patch will likely go through several revisions based
-   on feedback, so be prepared to engage in discussion and make improvements.
+  Before you send your patch, it’s important to understand the mailing list
+  culture. The Linux kernel community relies heavily on mailing lists for
+  communication. Your patch will likely go through several revisions based
+  on feedback, so be prepared to engage in discussion and make improvements.
 
 ## Here’s a quick overview of the process
 
